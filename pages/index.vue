@@ -22,11 +22,13 @@
 <script>
 export default {
   name: "IndexPage",
-  async asyncData({ $axios }) {
-    const users = await $axios.$get("https://randomuser.me/api/?results=10");
-    return {
-      users: users.results,
-    };
+  // async fetch({ store }) { не нужно, т.к. мы в сторе используем nuxtServerInit
+  //   await store.dispatch("fetchUsers");
+  // },
+  computed: {
+    users() {
+      return this.$store.getters["getUsers"];
+    },
   },
 };
 </script>

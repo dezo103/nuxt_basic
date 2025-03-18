@@ -11,6 +11,9 @@
       <div class="border rounded-xl p-2 m-4">
         <nuxt-link to="/">Main</nuxt-link>
       </div>
+      <div class="border rounded-xl p-2 m-4">
+        <nuxt-link to="lk">LK</nuxt-link>
+      </div>
     </nav>
     <nuxt class="flex justify-center" />
   </div>
